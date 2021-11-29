@@ -2,7 +2,7 @@ const express = require('express')
 const path=require('path')
 const morgan=require('morgan')
 const app = express()
-const port = 3000
+
 const exphbs = require('express-handlebars')
 const hbs = exphbs.create( { extname: '.hbs'})
 const db=require('./config/db')
@@ -28,6 +28,6 @@ route(app)
 
 
 
-app.listen(port, () => {
-  console.log(`App listening at http://localhost:${port}`)
+app.listen(process.env.PORT, function() {
+  
 })
